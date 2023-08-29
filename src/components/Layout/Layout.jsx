@@ -1,12 +1,20 @@
 
+import { Auth } from "components/Auth/Auth";
 import Navigation from "components/Navigation/Navigation";
-import { Outlet } from "react-router-dom"
+import { UserMenu } from "components/UserMenu/UserMenu";
 
-const Layout = () => {
+import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom"
+import { selectIsLoggedIn } from "redux/auth/selectors";
+
+export const Layout = () => {
+   const isLoggedIn = useSelector(selectIsLoggedIn);
     return (
         <>
         <header>
            <Navigation /> 
+           {isLoggedIn ?  <UserMenu /> : <Auth />}
+          
         </header>
         <main>
             <Outlet />
@@ -14,4 +22,3 @@ const Layout = () => {
         </>
     )
 }
-export default Layout;
