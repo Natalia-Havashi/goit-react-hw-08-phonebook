@@ -7,7 +7,6 @@ export const LoginPage = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.currentTarget;
-    // const { email, password } = form.elements;
     try {
        dispatch(
         loginUserThunk({
