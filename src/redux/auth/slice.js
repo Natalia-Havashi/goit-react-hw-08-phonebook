@@ -14,6 +14,7 @@ const initialState = {
   error: null,
   isLoading: false,
 };
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState,

@@ -5,11 +5,11 @@ export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   return (
     <li>
-      {contact.name} : {contact.phone}
+      {contact?.name} : {contact?.phone}
       <button
         type="button"
         onClick={() => {
-          dispatch(deleteContact(contact.id));
+          dispatch(deleteContact(contact?.id));
         }}
       >
         Delete

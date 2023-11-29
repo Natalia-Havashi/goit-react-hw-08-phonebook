@@ -32,7 +32,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-      devTools: process.env.NODE_ENV === 'development',
+      
     }),
     
 });
