@@ -1,14 +1,12 @@
+import { Container, Paragraph, Title } from 'pages/styled.styled';
+
 export const HomePage = () => {
   return (
-    <div>
-      <h1>PhoneBook</h1>
-      <div>
-        <p>This is your contact book. 
-            To add a contact 
-            Register or login</p>
-      </div>
-    </div>
+    <Container>
+      <Title>PhoneBook</Title>
+      <Paragraph>
+        This is your contact book. To add a contact Register or login!
+      </Paragraph>
+    </Container>
   );
 };
-
-

@@ -1,3 +1,8 @@
+import {
+  ContactListContainer,
+  NoContactsMessage,
+} from 'components/styled.styled';
+
 import { Contact } from 'components/Contact/Contact';
 import { useSelector } from 'react-redux';
 import { getContacts, getFiltered } from 'redux/Contacts/selector';
@@ -13,13 +18,13 @@ export const ContactList = () => {
   return (
     <>
       {filteredContacts.length !== 0 ? (
-        <ul>
+        <ContactListContainer>
           {filteredContacts.map(contact => (
             <Contact key={contact.id} contact={contact} />
           ))}
-        </ul>
+        </ContactListContainer>
       ) : (
-        <p>No contacts</p>
+        <NoContactsMessage>No contacts</NoContactsMessage>
       )}
     </>
   );

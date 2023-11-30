@@ -1,17 +1,17 @@
-import { NavLink } from "react-router-dom"
+import { AuthWrapper } from 'components/styled.styled';
+import { NavLink } from 'react-router-dom';
 
 export const Auth = () => {
-    return (
-        <nav>
-             <ul>
+  return (
+    <AuthWrapper>
+      <ul>
         <li>
-            <NavLink to='login'>Log In</NavLink>
+          <NavLink to="login">Log In</NavLink>
         </li>
         <li>
-            <NavLink to='register'>Sign Up</NavLink>
+          <NavLink to="register">Sign Up</NavLink>
         </li>
-       </ul>
-        </nav>
-      
-    )
-}
+      </ul>
+    </AuthWrapper>
+  );
+};

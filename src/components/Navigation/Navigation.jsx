@@ -1,22 +1,23 @@
+import { ContainerNav, LinkNav, NavUl } from 'components/styled.styled';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 const Navigation = () => {
   const isLoggeIn = useSelector(selectIsLoggedIn);
   return (
-    <>
-      <NavLink to="/">Home</NavLink>
+    <ContainerNav>
+      <LinkNav to="/">Home</LinkNav>
 
       <nav>
         {isLoggeIn && (
-          <ul>
+          <NavUl>
             <li>
-              <NavLink to="contacts">Contacts</NavLink>
+              <LinkNav to="contacts">Contacts</LinkNav>
             </li>
-          </ul>
+          </NavUl>
         )}
       </nav>
-    </>
+    </ContainerNav>
   );
 };
 
