@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
 `;
 
 export const Title = styled.h1`
